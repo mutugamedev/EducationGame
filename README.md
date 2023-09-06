@@ -30,7 +30,7 @@ Repository untuk Produksi Game Edukasi Pertama SMK Mutuharjo
   <summary>Cara buat PR dari Issue</summary>
   <br>
 
-1. clone dari branch main ke folder kalian dengan cara ```git clone git@github.com:Mutuharjo-Game-Development/EducationGame.git```
+1. C dari branch main ke folder kalian dengan cara ```git clone git@github.com:Mutuharjo-Game-Development/EducationGame.git```
 3. Lalu masuk ke foldernya ```cd NamaFolder```
 2. Lalu pull new version dari branch staging dengan cara ```git pull origin staging```
 4. Ubah work directory kalian, misal mau mengerjakan script di folder Script ```cd Script```
