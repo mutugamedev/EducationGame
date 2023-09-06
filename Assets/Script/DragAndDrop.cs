@@ -15,6 +15,10 @@ public class DragAndDrop : MonoBehaviour
     private void Start()
     {
         resetPos = transform.localPosition;
+        if (gameObject.GetComponent<BoxCollider2D>() == null)
+        {
+            gameObject.AddComponent<BoxCollider2D>();
+        }
     }
 
     // Update is called once per frame
