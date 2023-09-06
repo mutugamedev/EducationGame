@@ -1,4 +1,3 @@
-![image](https://github.com/Mutuharjo-Game-Development/EducationGame/assets/118568030/f77869c7-93f9-4c0a-839b-c36883fbbf91)# EducationGame
 Repository untuk Produksi Game Edukasi Pertama SMK Mutuharjo
 
 <details>
