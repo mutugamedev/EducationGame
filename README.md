@@ -1,4 +1,4 @@
-# EducationGame
+![image](https://github.com/Mutuharjo-Game-Development/EducationGame/assets/118568030/f77869c7-93f9-4c0a-839b-c36883fbbf91)# EducationGame
 Repository untuk Produksi Game Edukasi Pertama SMK Mutuharjo
 
 <details>
@@ -31,13 +31,16 @@ Repository untuk Produksi Game Edukasi Pertama SMK Mutuharjo
   <summary>Cara buat PR dari Issue</summary>
   <br>
 
-1. Pull dari branch staging dengan cara ```git pull https://github.com/Mutuharjo-Game-Development/EducationGame.git```
-2. Buat dan ubah ke branch yang dituju di terminal ```git checkout -b "nama issue. ex: feat/add-movement"```
-3. Pastikan kalian sudah berada di branch yang tepat dengan mengeceknya menggunakan command ```git branch```
-4. Setelah selesai dengan tugas yang ada di Issue, kalian bisa melakukan push seperti biasa dengan cara ```git add .```, lalu commit ```git commit -m 'commit sesuai apa yang dirubah. ex: "
-Fix: Bug at movement"'```, setelah itu bisa di push ke branch sesuai yang tadi dibuat, ```git push origin feat/add-movement```. Sebelumnya pastikan dulu kalian sudah berada di branch ```feat/add-movement```
-5. Lalu buat Pull Request di github dengan mengcompare branch yang kalian buat tadi dengan branch staging
-6. Tunggu sampai reviewers meng-approve PR kalian
+1. clone dari branch main ke folder kalian dengan cara ```git clone git@github.com:Mutuharjo-Game-Development/EducationGame.git```
+3. Lalu masuk ke foldernya ```cd NamaFolder```
+2. Lalu pull new version dari branch staging dengan cara ```git pull origin staging```
+4. Ubah work directory kalian, misal mau mengerjakan script di folder Script ```cd Script```
+5. Jikalau sudah selesai dengan perkerjaanya, kalian bisa membuat branch baru dengan cara ```git checkout -b namabranch``` contoh nama branch: feat/movement
+6. Pastikan kalian sudah berada di branch sesuai yang kalian buat tadi dengan cara ```git branch``` atau ```git status``` untuk melihat status terkini git kalian
+7. Lalu kalian bisa push ke branch nya dengan cara ```git add .``` untuk menambah semua perubahan, jangan lupa untuk menuliskan nama commit sesuai apa yang kalian kerjakan misal ```git commit -m 'feat: movement'``` setelah itu kalian bisa push ke nama branch yang kalian buat ```git push origin feat/movement```
+8. Setelah itu kalian bisa buat Pull Request dengan meng-compare branch yang kalian buat dengan branch staging, lalu buat Pull Request
+9. Tunggu sampai reviewer meng-accept PR kalian
+10. Setelah itu, PR nya bisa di merge ke staging
 </details> 
 
 #### Engine: Unity 2D
