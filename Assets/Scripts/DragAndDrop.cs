@@ -35,45 +35,49 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!isDropped)
-        {
-            Vector2 mousePos;
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = mousePos;
+        // if (isDropped)
+        // {
+        //     return;
+        // }
+        Vector2 mousePos;
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = mousePos;
 
-            GetComponent<SpriteRenderer>().sortingOrder = 10;
-        }
+        GetComponent<SpriteRenderer>().sortingOrder = 10;
     }
 
     private void OnMouseUp()
     {
 
-        if (!isDropped)
+        // if (isDropped)
+        // {
+        //     return;
+        // }
+        GetComponent<SpriteRenderer>().sortingOrder = layerOrder;
+
+        if (droppablePosition)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = layerOrder;
-
-            if (droppablePosition)
+            if (droppablePosition.TryGetComponent(out DropPlace dropPlace) /*&& !dropPlace.isPlaced*/)
             {
-                if (droppablePosition.TryGetComponent(out DropPlace dropPlace) && !dropPlace.isPlaced)
-                {
-                    transform.position = droppablePosition.transform.position;
+                transform.position = droppablePosition.transform.position;
 
-                    dropPlace.inRightPlace = ID == droppablePosition.GetComponent<DropPlace>().ID;
-                    dropPlace.isPlaced = true;
-                    isDropped = true;
+                dropPlace.inRightPlace = ID == droppablePosition.GetComponent<DropPlace>().ID;
+                dropPlace.isPlaced = true;
+                isDropped = true;
 
-                    ButtonFunction.instance.answerList.Add(dropPlace.inRightPlace);
-                }
-                else
-                {
-                    ResetPosition();
-                }
-                Debug.Log(gameObject.name + (dropPlace.inRightPlace ? " in the right place" : " not in the right place"));
+                ButtonFunction.instance.answerList.Add(dropPlace.inRightPlace);
+
+                AttemptsCounter.instance.IncreaseAttempts();
             }
             else
             {
                 ResetPosition();
             }
+            Debug.Log(gameObject.name + (dropPlace.inRightPlace ? " in the right place" : " not in the right place"));
+        }
+        else
+        {
+            ResetPosition();
         }
     }
 

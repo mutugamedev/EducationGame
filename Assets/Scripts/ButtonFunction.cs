@@ -18,7 +18,6 @@ public class ButtonFunction : MonoBehaviour
         if (answerList.Contains(false))
         {
             Debug.Log("Jawaban Salah, Ulangi lagi");
-            ResetButton();
         }
         else if (answerList.Count == 0)
         {
@@ -28,6 +27,8 @@ public class ButtonFunction : MonoBehaviour
         {
             Debug.Log("Jawaban Benar");
         }
+        // Debug.Log(answerList.Contains(false) ? "Jawaban Salah, Ulangi lagi" : answerList.Count == 0 ? "Anda belum mencocokkan jawaban" : "Jawaban Benar");
+        ResetButton();
     }
     public void ResetButton()
     {
